@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - lightningstriker
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - User Interface
+  - Player Hat
+  - Player Robe
+  - Player Aura
+  - Player
+  - Player Staff
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2625317769
+    locked: 0
+  - name: Ground
+    uniqueID: 3119250591
+    locked: 0
+  - name: Enemies
+    uniqueID: 3561204879
+    locked: 0
+  - name: Player Staff
+    uniqueID: 1844518485
+    locked: 0
+  - name: Player
+    uniqueID: 1984166297
+    locked: 0
+  - name: Player Aura
+    uniqueID: 689490105
+    locked: 0
+  - name: Player Robes
+    uniqueID: 21070949
+    locked: 0
+  - name: Player Hat
+    uniqueID: 293396897
+    locked: 0
+  - name: Foreground
+    uniqueID: 2320982355
+    locked: 0
+  - name: User Interface
+    uniqueID: 158345801
+    locked: 0
