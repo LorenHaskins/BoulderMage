@@ -44,9 +44,12 @@ public class boulderController : MonoBehaviour {
             if (((boulderLocation + boulderDistance) > staffLocation) && (staffLocation > (boulderLocation + -boulderDistance)))
             {
                 hDirection = 0;
+                staffAnim.SetBool("comeAlive",true);
+
             } else if (staffLocation > (boulderLocation + boulderDistance))
             {
                 hDirection = 1;
+                
             } else if (staffLocation < (boulderLocation + -boulderDistance))
             {
                 hDirection = -1;

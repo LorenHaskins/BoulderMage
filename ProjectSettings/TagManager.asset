@@ -6,6 +6,9 @@ TagManager:
   tags:
   - lightningstriker
   - staff
+  - aura
+  - lightning
+  - enemy
   layers:
   - Default
   - TransparentFX
@@ -58,9 +61,6 @@ TagManager:
   - name: Enemies
     uniqueID: 3561204879
     locked: 0
-  - name: Staff
-    uniqueID: 1844518485
-    locked: 0
   - name: Boulder
     uniqueID: 1984166297
     locked: 0
@@ -70,8 +70,17 @@ TagManager:
   - name: Hat
     uniqueID: 293396897
     locked: 0
+  - name: Staff
+    uniqueID: 1844518485
+    locked: 0
   - name: Aura
     uniqueID: 689490105
+    locked: 0
+  - name: Lightning
+    uniqueID: 3574431605
+    locked: 0
+  - name: Cloud
+    uniqueID: 1362789469
     locked: 0
   - name: Foreground
     uniqueID: 2320982355
