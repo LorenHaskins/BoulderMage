@@ -11,7 +11,6 @@ public class staffController : MonoBehaviour {
     public static float hDirection = 0; //Horizontal direction
     public bool strikeState; // Allow Lightning Strikes
     public bool auraState; //Allow Aura to be shot
-    public float hSpeed; //speed character can move on a horizontal plane
     public Animator anim; // Calls animator
     public float staffMovement; //is the staff moving?
     public Vector2 localScale; //change object scale
@@ -22,19 +21,23 @@ public class staffController : MonoBehaviour {
     public GameObject lightningPrefab;
     public Transform lightningSpawn;
     public float staffFacing;
-    
+    public GameObject gameManager;
+    public playerStats PlayerStats;
+    public float statMultiplyer;
 
     // Use this for initialization
     void Start () {
         rb2d = GetComponent<Rigidbody2D>(); //reference rb2d
         staffLightningPoint = GetComponent<BoxCollider2D>(); //reference box collider
         anim = GetComponent<Animator>(); //reference animator
-        hSpeed = 1f; //Horizontal Speed
         moveLocation = 0; //Default 0
         strikePoint = 0; //Default 0
         hDirection = 0; //Default 0, 1 is right, -1 is left
         strikeBounds = 0; //Default 0
         strikeState = false;
+
+        gameManager = GameObject.Find("gameManager");
+        PlayerStats = gameManager.GetComponent<playerStats>();
     }
 
     bool lightningInput()
@@ -59,6 +62,8 @@ public class staffController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        statMultiplyer = PlayerStats.playerSpeedStat;
+
         updateMotion();
         updateAnimation();
     }
@@ -110,7 +115,8 @@ public class staffController : MonoBehaviour {
                 strikeState = false; //Causes the boulder to stop jittering, and ceases the strike state
             }
         }
-        rb2d.velocity = (transform.right * hSpeed * hDirection);
+
+        rb2d.velocity = (transform.right *  hDirection * statMultiplyer);
     }
 
     void updateAnimation()

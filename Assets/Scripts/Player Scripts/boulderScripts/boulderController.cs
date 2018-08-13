@@ -12,32 +12,38 @@ public class boulderController : MonoBehaviour {
     private float staffLocation;
     private float boulderLocation;
     public float boulderDistance;
-    private float hSpeed;
     public float hDirection;
     private GameObject staff;
     private staffController staffCtrl;
     private Animator anim;
     private Animator staffAnim;
+    public GameObject gameManager;
+    public playerStats PlayerStats;
+    public float statMultiplyer;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 
         rb2d = GetComponent<Rigidbody2D>();
         boulderCollider = GetComponent<CircleCollider2D>();
         anim = GetComponent<Animator>();
         boulderDistance = 1;
         hDirection = 0;
-        hSpeed = 1f;
         staff = GameObject.Find("staff");
         staffCtrl = staff.GetComponent<staffController>();
         staffAnim = staff.GetComponent<Animator>();
+
+        gameManager = GameObject.Find("gameManager");
+        PlayerStats = gameManager.GetComponent<playerStats>();
+
     }
 	
 	// Update is called once per frame
 	void Update () {
+        statMultiplyer = PlayerStats.playerSpeedStat;
 
         //Motion Controller
-            boulderLocation = (Mathf.Round(boulderCollider.bounds.center.x * 100) / 100); //Where is the boulder
+        boulderLocation = (Mathf.Round(boulderCollider.bounds.center.x * 100) / 100); //Where is the boulder
             staffLocation = staffCtrl.strikePoint;
 
             //Move Boulder With Staff
@@ -55,10 +61,10 @@ public class boulderController : MonoBehaviour {
                 hDirection = -1;
             }
 
-            rb2d.velocity = (transform.right * hSpeed * hDirection);
+            rb2d.velocity = (transform.right * hDirection * statMultiplyer);
 
-     //   //Animator Controller
-            if (hDirection == 0)
+        //   //Animator Controller
+        if (hDirection == 0)
             {
                 anim.SetBool("idle", true);
                 anim.SetBool("move", false);

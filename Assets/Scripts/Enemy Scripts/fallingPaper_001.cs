@@ -17,7 +17,7 @@ public class fallingPaper_001 : MonoBehaviour {
     private BoxCollider2D staffCollider;
     private bool whenDestroyed;
     private float worthXP;
-    public GameObject player;
+    public GameObject GameManager;
     public float givePlayerExp;
     public playerStats PlayerStats;
 
@@ -32,9 +32,8 @@ public class fallingPaper_001 : MonoBehaviour {
         staff = GameObject.Find("staff");
         staffCollider = staff.GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
-        player = GameObject.Find("Player");
-        PlayerStats = player.GetComponent<playerStats>();
-        givePlayerExp = PlayerStats.playerExp;
+        GameManager = GameObject.Find("gameManager");
+        PlayerStats = GameManager.GetComponent<playerStats>();
         worthXP = 1;
     }
 	
@@ -45,7 +44,7 @@ public class fallingPaper_001 : MonoBehaviour {
 
         if (whenDestroyed)
         {
-            givePlayerExp += worthXP;
+            PlayerStats.playerExp += worthXP;
             Destroy(gameObject, 0f);
         }
 
