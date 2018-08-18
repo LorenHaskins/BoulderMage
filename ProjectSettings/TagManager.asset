@@ -10,6 +10,11 @@ TagManager:
   - lightning
   - enemy
   - barrier
+  - runeSpeed
+  - runeRain
+  - runeWind
+  - runeTime
+  - runeInv
   layers:
   - Default
   - TransparentFX
@@ -26,11 +31,11 @@ TagManager:
   - Player
   - Player Staff
   - ignoreCollision
-  - 
-  - 
-  - 
-  - 
-  - 
+  - runeSpeed
+  - runeRain
+  - runeWind
+  - runeTime
+  - runeInv
   - 
   - 
   - 

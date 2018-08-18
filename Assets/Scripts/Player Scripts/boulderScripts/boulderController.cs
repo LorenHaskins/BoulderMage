@@ -7,21 +7,34 @@ using UnityEngine;
 
 public class boulderController : MonoBehaviour {
 
+    public static boulderController boulder;
+
     private Rigidbody2D rb2d;
     private CircleCollider2D boulderCollider;
     private float staffLocation;
     private float boulderLocation;
     public float boulderDistance;
     public float hDirection;
-    private GameObject staff;
-    private staffController staffCtrl;
+    private staffController staff;
     private Animator anim;
-    private Animator staffAnim;
-    public GameObject gameManager;
-    public playerStats PlayerStats;
+    public playerStats pS;
     public float statMultiplyer;
+    public float maxVelocity;
 
     // Use this for initialization
+    void Awake()
+    {
+        //This allows this object to be the only object in existance
+        if (boulder == null)
+        {
+            boulder = this;
+        }
+        else if (boulder != this)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void Start () {
 
         rb2d = GetComponent<Rigidbody2D>();
@@ -29,28 +42,23 @@ public class boulderController : MonoBehaviour {
         anim = GetComponent<Animator>();
         boulderDistance = 1;
         hDirection = 0;
-        staff = GameObject.Find("staff");
-        staffCtrl = staff.GetComponent<staffController>();
-        staffAnim = staff.GetComponent<Animator>();
-
-        gameManager = GameObject.Find("gameManager");
-        PlayerStats = gameManager.GetComponent<playerStats>();
+        staff = staffController.staff;
+        pS = playerStats.stats;
 
     }
 	
 	// Update is called once per frame
 	void Update () {
-        statMultiplyer = PlayerStats.playerSpeedStat;
+        updateVariables();
 
         //Motion Controller
         boulderLocation = (Mathf.Round(boulderCollider.bounds.center.x * 100) / 100); //Where is the boulder
-            staffLocation = staffCtrl.strikePoint;
+            staffLocation = staff.strikePoint;
 
             //Move Boulder With Staff
             if (((boulderLocation + boulderDistance) > staffLocation) && (staffLocation > (boulderLocation + -boulderDistance)))
             {
                 hDirection = 0;
-                staffAnim.SetBool("comeAlive",true);
 
             } else if (staffLocation > (boulderLocation + boulderDistance))
             {
@@ -61,7 +69,7 @@ public class boulderController : MonoBehaviour {
                 hDirection = -1;
             }
 
-            rb2d.velocity = (transform.right * hDirection * statMultiplyer);
+        applyMovementSpeed();
 
         //   //Animator Controller
         if (hDirection == 0)
@@ -83,16 +91,27 @@ public class boulderController : MonoBehaviour {
             }
 
             //Flip Sprite when Firing
-            if (staffAnim.GetCurrentAnimatorStateInfo(0).IsName("staffShoot"))
+            if (staff.animShoot)
             {
-            if (staffCtrl. strikePoint < staffCtrl.moveLocation)
+            if (staff. strikePoint < staff.moveLocation)
             {
                 transform.localScale = new Vector2(1, 1);
             }
-            else if (staffCtrl.strikePoint > staffCtrl.moveLocation)
+            else if (staff.strikePoint > staff.moveLocation)
             {
                 transform.localScale = new Vector2(-1, 1);
             }
         }
+    }
+
+    void updateVariables()
+    {
+        statMultiplyer = pS.actualPlayerSpeed;
+        maxVelocity = (hDirection * statMultiplyer);
+    }
+
+    void applyMovementSpeed()
+    {
+            rb2d.velocity = (transform.right * maxVelocity);
     }
 }

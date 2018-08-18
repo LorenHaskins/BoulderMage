@@ -4,32 +4,28 @@ using UnityEngine;
 
 public class faceController : MonoBehaviour {
     private Animator anim;
-    private GameObject staff;
     private Animator staffAnim;
-    private GameObject boulder;
-    private boulderController boulderCtrl;
-    private staffController staffCtrl;
+    private boulderController boulder;
+    private staffController staff;
 
     // Use this for initialization
     void Start () {
         anim = GetComponent<Animator>();
-        staff = GameObject.Find("staff");
-        staffAnim = staff.GetComponent<Animator>();
-        boulder = GameObject.Find("boulder");
-        boulderCtrl = boulder.GetComponent<boulderController>();
-        staffCtrl = staff.GetComponent<staffController>();
+        staffAnim = staffController.anim;
+        boulder = boulderController.boulder;
+        staff = staffController.staff;
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
         //Idle to Move Animations
-        if ((boulderCtrl.hDirection == 0) && (staffCtrl.staffMovement == 0))
+        if (boulder.hDirection == 0)
         {
             anim.SetBool("idle", true);
             anim.SetBool("move", false);
         }
-        else if (boulderCtrl.hDirection != 0)
+        else if (boulder.hDirection != 0)
         {
             anim.SetBool("move", true);
             anim.SetBool("idle", false);

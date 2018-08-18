@@ -53,3 +53,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeedStat: 0
   playerExp: 0
+  playerLevel: 0
+  runeUnlockSpeed: 0
+  runeUnlockRain: 0
+  runeUnlockWind: 0
+  runeUnlockTime: 0
+  runeUnlockInv: 0
+  runeCoolDownSpeed: 0
+  runeCoolDownRain: 0
+  runeCoolDownWind: 0
+  runeCoolDownTime: 0
+  runeCoolDownInv: 0
+  runeDuractionSpeed: 0
+  runeDurationRain: 0
+  runeDurationWind: 0
+  runeDurationTIme: 0
+  runeDurationInv: 0
+  runeMultiplyerSpeed: 0
+  actualPlayerSpeed: 0

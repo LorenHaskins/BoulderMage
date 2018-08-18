@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class animatorFaceBoulderHat : MonoBehaviour {
     private Animator anim;
-    private GameObject staff;
+    private staffController staff;
     private Animator staffAnim;
-    private staffController staffCtrl;
 
     // Use this for initialization
     void Start () {
         anim = GetComponent<Animator>();
-        staff = GameObject.Find("staff");
-        staffAnim = staff.GetComponent<Animator>();
-        staffCtrl = staff.GetComponent<staffController>();
+        staff = staffController.staff;
+        staffAnim = staffController.anim;
     }
 	
 	// Update is called once per frame
@@ -21,7 +19,7 @@ public class animatorFaceBoulderHat : MonoBehaviour {
         //Animation Controller
 
         //Trigger Lightning Animation
-        if (staffAnim.GetCurrentAnimatorStateInfo(0).IsName("staffLightning"))
+        if (staff.animLightning)
         {
             anim.SetBool("lightning", true);
         }
@@ -31,7 +29,7 @@ public class animatorFaceBoulderHat : MonoBehaviour {
         }
 
         //Trigger Aura Animation
-        if (staffAnim.GetCurrentAnimatorStateInfo(0).IsName("staffShoot"))
+        if (staff.animShoot)
         {
             anim.SetBool("shoot", true);
         }

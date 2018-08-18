@@ -10,30 +10,29 @@ public class fallingPaper_001 : MonoBehaviour {
     public Animator anim; // Calls animator
     public CircleCollider2D boulderCollider;
     private float boulderLocation;
-    private GameObject boulder;
+    private boulderController boulder;
     private float selfLocation;
     public BoxCollider2D selfCollider;
-    private GameObject staff;
+    private staffController staff;
     private BoxCollider2D staffCollider;
     private bool whenDestroyed;
     private float worthXP;
-    public GameObject GameManager;
     public float givePlayerExp;
-    public playerStats PlayerStats;
+    public playerStats pS;
 
     // Use this for initialization
     void Start () {
         rb2d = GetComponent<Rigidbody2D>();
-        boulder = GameObject.Find("boulder");
+        boulder = boulderController.boulder;
         boulderCollider = boulder.GetComponent<CircleCollider2D>();
         hSpeed = 1f;
         hDirection = 0;
         selfCollider = GetComponent<BoxCollider2D>();
-        staff = GameObject.Find("staff");
+        staff = staffController.staff;
         staffCollider = staff.GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
-        GameManager = GameObject.Find("gameManager");
-        PlayerStats = GameManager.GetComponent<playerStats>();
+        pS = playerStats.stats;
+
         worthXP = 1;
     }
 	
@@ -44,7 +43,7 @@ public class fallingPaper_001 : MonoBehaviour {
 
         if (whenDestroyed)
         {
-            PlayerStats.playerExp += worthXP;
+            pS.playerExp += worthXP;
             Destroy(gameObject, 0f);
         }
 
