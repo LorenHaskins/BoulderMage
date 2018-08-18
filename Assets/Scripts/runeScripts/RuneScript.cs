@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
 public abstract class RuneScript : MonoBehaviour {
-    public static RuneScript rune;
     private string runeType;
     protected Animator anim;
     protected playerStats pS;
@@ -11,16 +10,6 @@ public abstract class RuneScript : MonoBehaviour {
     protected abstract string RuneType { get; }
 
     protected abstract void RuneAction();
-
-    // Use this for initialization
-    void Awake() {
-        //This allows this object to be the only object in existance
-        if(rune == null) {
-            rune = this;
-        } else if(rune != this) {
-            Destroy(gameObject);
-        }
-    }
 
     void Start() {
         pS = playerStats.stats;

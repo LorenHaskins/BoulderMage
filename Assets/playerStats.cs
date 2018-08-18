@@ -27,7 +27,7 @@ public class playerStats : MonoBehaviour {
     public float runeMultiplyerSpeed;
     public float actualPlayerSpeed;
     private GameObject speedRune;
-    private runeScriptSpeed speedScript;
+    private RuneScriptSpeed speedScript;
 
     // Use this for initialization
     void Awake()
@@ -50,7 +50,7 @@ public class playerStats : MonoBehaviour {
         playerExp = 0f;
         playerSpeedStat = 1f;
         speedRune = GameObject.Find("runeSpeed");
-        speedScript = speedRune.GetComponent<runeScriptSpeed>();
+        speedScript = speedRune.GetComponent<RuneScriptSpeed>();
 
 
         //Speed Rune Stats

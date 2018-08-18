@@ -2,6 +2,17 @@
 
 public class RuneScriptInv : RuneScript {
     protected override string RuneType { get { return "inv"; } }
+    public static RuneScriptInv rune;
+
+    // Use this for initialization
+    void Awake() {
+        //This allows this object to be the only object in existance
+        if(rune == null) {
+            rune = this;
+        } else if(rune != this) {
+            Destroy(gameObject);
+        }
+    }
 
     protected override void RuneAction() {
         Debug.Log("Rain Rune AWAYYYY!!!");

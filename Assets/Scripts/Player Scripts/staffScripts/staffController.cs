@@ -31,7 +31,7 @@ public class staffController : MonoBehaviour {
     public float statMultiplyer;
     bool animState(string state) { return anim.GetCurrentAnimatorStateInfo(0).IsName(state); }
     bool mouseClick() { return Input.GetMouseButtonDown(0); }
-    public runeScriptSpeed RuneScriptSpeed;
+    public RuneScriptSpeed RuneScriptSpeed;
     public float runeMultiplyer;
     public float velocity;
     public float maxVelocity;
@@ -60,7 +60,7 @@ public class staffController : MonoBehaviour {
         strikeBounds = 0; //Default 0
         strikeState = false;
         pS = playerStats.stats;
-        RuneScriptSpeed = runeScriptSpeed.speedRune;
+        RuneScriptSpeed = RuneScriptSpeed.rune;
         runeMultiplyer = pS.runeMultiplyerSpeed;
     }
 
