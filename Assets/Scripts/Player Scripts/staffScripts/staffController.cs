@@ -35,6 +35,8 @@ public class staffController : MonoBehaviour {
     public float runeMultiplyer;
     public float velocity;
     public float maxVelocity;
+    private AudioSource sound;
+    public AudioClip lightningCharge;
 
     // Use this for initialization
     void Awake()
@@ -62,6 +64,7 @@ public class staffController : MonoBehaviour {
         pS = playerStats.stats;
         RuneScriptSpeed = RuneScriptSpeed.rune;
         runeMultiplyer = pS.runeMultiplyerSpeed;
+        sound = GetComponent<AudioSource>();
     }
 
     float roundToTenths(float x)
@@ -196,6 +199,7 @@ public class staffController : MonoBehaviour {
     void strikeLightning()
     {
         anim.SetBool("lightning", true);
+        sound.Play();
         animLightning = true;
         if (!animState("staffShoot"))
         {

@@ -16,7 +16,7 @@ public class boulderController : MonoBehaviour {
     public float boulderDistance;
     public float hDirection;
     private staffController staff;
-    private Animator anim;
+    public Animator anim;
     public playerStats pS;
     public float statMultiplyer;
     public float maxVelocity;
