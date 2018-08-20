@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 50749801297218774}
   - component: {fileID: 61320628940700564}
   - component: {fileID: 82988619920659700}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: auraPrefab
   m_TagString: aura
   m_Icon: {fileID: 0}

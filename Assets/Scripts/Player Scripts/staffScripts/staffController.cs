@@ -9,7 +9,6 @@ public class staffController : MonoBehaviour {
     public bool animIdle;
     public bool animMotion;
     public bool animShoot;
-
     public Rigidbody2D rb2d; // Rigid Body reference
     public BoxCollider2D staffLightningPoint; //Box Collider to create reference for lightning
     public float strikePoint; //Where the staff should end up

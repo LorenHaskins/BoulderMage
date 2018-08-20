@@ -26,8 +26,8 @@ public class playerStats : MonoBehaviour {
     public int runeDurationInv;
     public float runeMultiplyerSpeed;
     public float actualPlayerSpeed;
-    private GameObject speedRune;
-    private RuneScriptSpeed speedScript;
+    public RuneScriptSpeed RuneScriptSpeed;
+    public int coins;
 
     // Use this for initialization
     void Awake()
@@ -49,8 +49,8 @@ public class playerStats : MonoBehaviour {
         playerLevel = 1;
         playerExp = 0f;
         playerSpeedStat = 1f;
-        speedRune = GameObject.Find("runeSpeed");
-        speedScript = speedRune.GetComponent<RuneScriptSpeed>();
+        RuneScriptSpeed = RuneScriptSpeed.rune;
+        coins = 5;
 
 
         //Speed Rune Stats
@@ -85,7 +85,7 @@ public class playerStats : MonoBehaviour {
     {
         actualPlayerSpeed = playerSpeedStat;
 
-        if (speedScript.runeActive == true)
+        if (RuneScriptSpeed.runeActive == true)
         {
             actualPlayerSpeed = playerSpeedStat + runeMultiplyerSpeed;
             

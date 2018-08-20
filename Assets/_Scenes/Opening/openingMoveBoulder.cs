@@ -9,7 +9,7 @@ public class openingMoveBoulder : MonoBehaviour
 {
 
     private Rigidbody2D rb2d;
-    private BoxCollider2D col;
+    protected BoxCollider2D col;
     public float hDirection;
     public BoxCollider2D ignoreCol;
     public Animator anim;

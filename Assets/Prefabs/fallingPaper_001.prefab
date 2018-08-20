@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 61936191746627966}
   - component: {fileID: 50736413436914510}
   - component: {fileID: 114428256035621028}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fallingPaper_001
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -123,9 +123,10 @@ MonoBehaviour:
   anim: {fileID: 0}
   boulderCollider: {fileID: 0}
   selfCollider: {fileID: 0}
-  GameManager: {fileID: 0}
   givePlayerExp: 0
-  PlayerStats: {fileID: 0}
+  pS: {fileID: 0}
+  bronzeCoinPrefab: {fileID: 1126258540791388, guid: f5b29b2f110024d45b219125eefde3a4,
+    type: 2}
 --- !u!212 &212009024517390696
 SpriteRenderer:
   m_ObjectHideFlags: 1

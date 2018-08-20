@@ -5,13 +5,11 @@ using UnityEngine;
 public class animatorFaceBoulderHat : MonoBehaviour {
     private Animator anim;
     private staffController staff;
-    private Animator staffAnim;
 
     // Use this for initialization
     void Start () {
         anim = GetComponent<Animator>();
         staff = staffController.staff;
-        staffAnim = staffController.anim;
     }
 	
 	// Update is called once per frame

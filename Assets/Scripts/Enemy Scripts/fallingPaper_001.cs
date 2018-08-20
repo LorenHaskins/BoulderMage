@@ -19,6 +19,11 @@ public class fallingPaper_001 : MonoBehaviour {
     private float worthXP;
     public float givePlayerExp;
     public playerStats pS;
+    public GameObject bronzeCoinPrefab;
+    private Quaternion dropRotation;
+    private int bronzeCoinChance;
+    private int maxBronzeCoins;
+    private int minBronzeCoins;
 
     // Use this for initialization
     void Start () {
@@ -32,8 +37,11 @@ public class fallingPaper_001 : MonoBehaviour {
         staffCollider = staff.GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
         pS = playerStats.stats;
-
         worthXP = 1;
+        minBronzeCoins = 0;
+        maxBronzeCoins = 5;
+        bronzeCoinChance = Random.Range(minBronzeCoins, maxBronzeCoins);
+        dropRotation = new Quaternion(transform.rotation.x, transform.rotation.y, 0, transform.rotation.w);
     }
 	
 	// Update is called once per frame
@@ -43,6 +51,7 @@ public class fallingPaper_001 : MonoBehaviour {
 
         if (whenDestroyed)
         {
+            dropCoin();
             pS.playerExp += worthXP;
             Destroy(gameObject, 0f);
         }
@@ -64,11 +73,6 @@ public class fallingPaper_001 : MonoBehaviour {
             rb2d.velocity = (transform.right * hSpeed * hDirection);
         }
 
-        if (col.gameObject.name == "staff")
-        {
-            Physics2D.IgnoreCollision(staffCollider, selfCollider);
-        }
-
         if (col.gameObject.tag == "aura")
         {
             Debug.Log("HIT WITH AURA");
@@ -87,6 +91,16 @@ public class fallingPaper_001 : MonoBehaviour {
         whenDestroyed = anim.GetCurrentAnimatorStateInfo(0).IsName("destroy");
         boulderLocation = (Mathf.Round(boulderCollider.bounds.center.x * 100) / 100);
         selfLocation = (Mathf.Round(selfCollider.bounds.center.x * 100) / 100);
+
+    }
+
+    void dropCoin()
+    {
+        Debug.Log("Drop Bronze Coin!");
+        // Create the Bullet from the Bullet Prefab
+        for (var i = 0; i < bronzeCoinChance; i++)
+            Instantiate(bronzeCoinPrefab,transform.position,dropRotation);
+
     }
 
 }

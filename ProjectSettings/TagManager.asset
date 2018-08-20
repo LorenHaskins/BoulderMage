@@ -15,6 +15,11 @@ TagManager:
   - runeWind
   - runeTime
   - runeInv
+  - gameManager
+  - goodDrop
+  - badDrop
+  - boulder
+  - ground
   layers:
   - Default
   - TransparentFX
@@ -24,18 +29,18 @@ TagManager:
   - UI
   - 
   - 
-  - User Interface
-  - Player Hat
-  - Player Robe
-  - Player Aura
-  - Player
-  - Player Staff
-  - ignoreCollision
-  - runeSpeed
-  - runeRain
-  - runeWind
-  - runeTime
-  - runeInv
+  - enemies
+  - drops
+  - staff
+  - boulder
+  - ground
+  - aura
+  - lightning
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
