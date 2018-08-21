@@ -6,7 +6,6 @@ public abstract class LootDrops : MonoBehaviour {
     protected Rigidbody2D rb2d;
     protected Animator anim;
     protected playerStats pS;
-    public int value;
     protected float horizVelocity;
     protected float vertVelocityMax;
     protected float vertVelocityMin;
@@ -16,6 +15,11 @@ public abstract class LootDrops : MonoBehaviour {
     public AudioSource soundGet;
     protected string lootType;
     protected abstract string LootType { get; }
+    protected abstract int Value { get; }
+
+    void Start() {
+        ObjectComponents();
+    }
 
     protected void ObjectComponents()
     {
@@ -41,7 +45,7 @@ public abstract class LootDrops : MonoBehaviour {
             Debug.Log("Aww Yiss Mother Fuckin' Coin");
             anim.SetTrigger("catch");
             soundGet.Play();
-            pS.coins += value;
+            pS.coins += Value;
             Destroy(gameObject, destructOnCatch);
         }
 
