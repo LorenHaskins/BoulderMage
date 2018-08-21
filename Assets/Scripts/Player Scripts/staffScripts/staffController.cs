@@ -54,7 +54,7 @@ public class staffController : MonoBehaviour {
     void Start () {
         rb2d = GetComponent<Rigidbody2D>(); //reference rb2d
         staffLightningPoint = GetComponent<BoxCollider2D>(); //reference box collider
-        anim = GetComponent<Animator>(); //reference animator
+        anim = staff.GetComponent<Animator>(); //reference animator
         moveLocation = 0; //Default 0
         strikePoint = 0; //Default 0
         hDirection = 0; //Default 0, 1 is right, -1 is left
@@ -76,7 +76,6 @@ public class staffController : MonoBehaviour {
         updateVariables();
         updateAnimation();
         updateMotion();
-        updateDependantAnimation();
     }
     
     void updateVariables()
@@ -133,8 +132,7 @@ public class staffController : MonoBehaviour {
     void updateAnimation()
     {
         staffMovement = staffController.hDirection;
-
-
+        
         if (strikeState == false)
         {
             anim.SetBool("lightning", false);
@@ -187,11 +185,9 @@ public class staffController : MonoBehaviour {
         if (!animState("staffShoot"))
         {
             Debug.Log("SHOOT AURA");
-            // Create the Bullet from the Bullet Prefab
-            var aura = (GameObject)Instantiate(
-                auraPrefab,
-                auraSpawn.position,
-                auraSpawn.rotation);
+            // Create Aura
+            Instantiate(auraPrefab, auraSpawn.position, auraSpawn.rotation);
+
         }
     }
 
@@ -203,11 +199,8 @@ public class staffController : MonoBehaviour {
         if (!animState("staffShoot"))
         {
             Debug.Log("SHOOT Lightning");
-            // Create the Bullet from the Bullet Prefab
-            var lightning = (GameObject)Instantiate(
-                lightningPrefab,
-                lightningSpawn.position,
-                lightningSpawn.rotation);
+            //Create Lightning
+            Instantiate(lightningPrefab, lightningSpawn.position, lightningSpawn.rotation);
         }
          
     }
@@ -226,14 +219,4 @@ public class staffController : MonoBehaviour {
             rb2d.velocity = (transform.right * maxVelocity);
         }
     }
-
-    void updateDependantAnimation()
-    {
-
-
-        if (anim.GetBool("shoot") == true)
-        {
-            
-        }
-}
 }

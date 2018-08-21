@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class faceController : MonoBehaviour {
     private Animator anim;
-    private Animator staffAnim;
     private boulderController boulder;
-    private staffController staff;
+
 
     // Use this for initialization
     void Start () {
         anim = GetComponent<Animator>();
-        staffAnim = staffController.anim;
         boulder = boulderController.boulder;
-        staff = staffController.staff;
     }
 	
 	// Update is called once per frame

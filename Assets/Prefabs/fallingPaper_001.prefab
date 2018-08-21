@@ -118,7 +118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02419c024eebaa244962911dc0831789, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb2d: {fileID: 0}
   hSpeed: 0
   anim: {fileID: 0}
   boulderCollider: {fileID: 0}
@@ -126,6 +125,10 @@ MonoBehaviour:
   givePlayerExp: 0
   pS: {fileID: 0}
   bronzeCoinPrefab: {fileID: 1126258540791388, guid: f5b29b2f110024d45b219125eefde3a4,
+    type: 2}
+  silverCoinPrefab: {fileID: 1125579018760938, guid: 4d32254d67863a641a18f1be05c974b9,
+    type: 2}
+  goldCoinPrefab: {fileID: 1721909931675212, guid: a224a911050a5784fba962f969e578f2,
     type: 2}
 --- !u!212 &212009024517390696
 SpriteRenderer:

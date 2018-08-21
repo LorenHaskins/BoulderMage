@@ -1372,6 +1372,11 @@ Prefab:
       propertyPath: m_TagString
       value: boulder
       objectReference: {fileID: 0}
+    - target: {fileID: 114200770704869624, guid: d58bc953bab17af45a2230da007a29a3,
+        type: 2}
+      propertyPath: auraState
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d58bc953bab17af45a2230da007a29a3, type: 2}
   m_IsPrefabAsset: 0
