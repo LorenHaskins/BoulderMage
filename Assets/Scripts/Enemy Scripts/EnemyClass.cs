@@ -38,6 +38,12 @@ public class EnemyClass : MonoBehaviour
     protected int goldCoinMax;
     protected int goldCoinMin;
 
+    public GameObject platinumCoinPrefab;
+    protected float platinumDropChance; //Chance of ANY coins dropping
+    protected int platinumCoinDropRate; //How many coins drop. based on Max and Min
+    protected int platinumCoinMax;
+    protected int platinumCoinMin;
+
     float roundToTenths(float x) { return (Mathf.Round(x * 10) / 10);}
 
     protected void ObjectComponents()
@@ -94,15 +100,23 @@ public class EnemyClass : MonoBehaviour
         if (dropPercentage <= goldDropChance)
         {
             goldCoinDropRate = Random.Range(goldCoinMin, goldCoinMax);
-            Debug.Log("Drop Silver Coin!");
+            Debug.Log("Drop Gold Coin!");
             // Create the Bullet from the Bullet Prefab
             for (var i = 0; i < goldCoinDropRate; i++)
                 Instantiate(goldCoinPrefab, transform.position, dropRotation);
         }
     }
 
-    protected void RollPercentage()
+    protected void dropPlatinumCoins()
     {
-        
+        var dropPercentage = Random.Range(0, 100);
+        if (dropPercentage <= platinumDropChance)
+        {
+            platinumCoinDropRate = Random.Range(platinumCoinMin, platinumCoinMax);
+            Debug.Log("Drop Platinum Coin!");
+            // Create the Bullet from the Bullet Prefab
+            for (var i = 0; i < platinumCoinDropRate; i++)
+                Instantiate(platinumCoinPrefab, transform.position, dropRotation);
+        }
     }
 }

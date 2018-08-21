@@ -30,6 +30,14 @@ TextureImporter:
     21300050: coinAnimation_25
     21300052: coinAnimation_26
     21300054: coinAnimation_27
+    21300056: coinAnimation_28
+    21300058: coinAnimation_29
+    21300060: coinAnimation_30
+    21300062: coinAnimation_31
+    21300064: coinAnimation_32
+    21300066: coinAnimation_33
+    21300068: coinAnimation_34
+    21300070: coinAnimation_35
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -138,9 +146,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 8
-        height: 8
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,7 +156,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e82146075adac44fa8402c2a0b48201
+      spriteID: 4a0c946524b1c6246a6aebcd5897f8b7
       vertices: []
       indices: 
       edges: []
@@ -157,10 +165,10 @@ TextureImporter:
       name: coinAnimation_1
       rect:
         serializedVersion: 2
-        x: 8
-        y: 32
-        width: 8
-        height: 8
+        x: 16
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,7 +176,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b816012d1a135f94aaa80490ff8bf2b6
+      spriteID: 1b920d94320d7b343be9c3e445307048
       vertices: []
       indices: 
       edges: []
@@ -177,10 +185,10 @@ TextureImporter:
       name: coinAnimation_2
       rect:
         serializedVersion: 2
-        x: 16
-        y: 32
-        width: 8
-        height: 8
+        x: 32
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,7 +196,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2100c037586dba48bb211ed34c66f88
+      spriteID: b2a2ff1c4b3b00945898179bf9d3aa72
       vertices: []
       indices: 
       edges: []
@@ -197,10 +205,10 @@ TextureImporter:
       name: coinAnimation_3
       rect:
         serializedVersion: 2
-        x: 24
-        y: 32
-        width: 8
-        height: 8
+        x: 48
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,7 +216,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9e3fb25a58b71f4b9898daf70100f5a
+      spriteID: 4185e6e1e26a9be41bab9802efaa55eb
       vertices: []
       indices: 
       edges: []
@@ -217,10 +225,10 @@ TextureImporter:
       name: coinAnimation_4
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 8
-        height: 8
+        x: 64
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,7 +236,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4fab259d3471964f8f5a6ab6c406a6f
+      spriteID: 2b1e7c306f9cf9a4291792198831b1c3
       vertices: []
       indices: 
       edges: []
@@ -237,10 +245,10 @@ TextureImporter:
       name: coinAnimation_5
       rect:
         serializedVersion: 2
-        x: 40
-        y: 32
-        width: 8
-        height: 8
+        x: 80
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,7 +256,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 743cff43bae5a064ab8cb775f5ee3a99
+      spriteID: e000f773754a188449e2ca7393ed7eee
       vertices: []
       indices: 
       edges: []
@@ -258,9 +266,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 24
-        width: 8
-        height: 8
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,7 +276,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43b49303d52948943a8a5550ecda7e59
+      spriteID: 146296900ac93f3448703cf8a1ef8018
       vertices: []
       indices: 
       edges: []
@@ -277,10 +285,10 @@ TextureImporter:
       name: coinAnimation_7
       rect:
         serializedVersion: 2
-        x: 8
-        y: 24
-        width: 8
-        height: 8
+        x: 16
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -288,7 +296,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a57fa774f5dbe74387818ffd3aaaf5c
+      spriteID: 0186940905979fe43aadfa73860ac7eb
       vertices: []
       indices: 
       edges: []
@@ -297,10 +305,10 @@ TextureImporter:
       name: coinAnimation_8
       rect:
         serializedVersion: 2
-        x: 16
-        y: 24
-        width: 8
-        height: 8
+        x: 32
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -308,7 +316,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84269c6a8e0c78e46a4cfbea25458382
+      spriteID: aaea184b654db82448c17ed1cc1f8fb7
       vertices: []
       indices: 
       edges: []
@@ -317,10 +325,10 @@ TextureImporter:
       name: coinAnimation_9
       rect:
         serializedVersion: 2
-        x: 24
-        y: 24
-        width: 8
-        height: 8
+        x: 48
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,7 +336,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbea032bf898fdd4f8f249b406c90b05
+      spriteID: 1315f1ada2d5cd048b5e18180f97cb36
       vertices: []
       indices: 
       edges: []
@@ -337,10 +345,10 @@ TextureImporter:
       name: coinAnimation_10
       rect:
         serializedVersion: 2
-        x: 32
-        y: 24
-        width: 8
-        height: 8
+        x: 64
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -348,7 +356,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7024d82997438040bd45784f9a99867
+      spriteID: 312cb11526a19314095ba0c6dae90fa7
       vertices: []
       indices: 
       edges: []
@@ -357,10 +365,10 @@ TextureImporter:
       name: coinAnimation_11
       rect:
         serializedVersion: 2
-        x: 40
-        y: 24
-        width: 8
-        height: 8
+        x: 80
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -368,7 +376,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9814eb21b557d2944a4ccc6b359c655a
+      spriteID: 83f14401b8ee2c8478ab61fb9b8bce79
       vertices: []
       indices: 
       edges: []
@@ -378,9 +386,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
-        width: 8
-        height: 8
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -388,7 +396,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 120fc2486984f924388b9c57144b6593
+      spriteID: f927c5ec7e3310c4dbe5d5a56ddf7801
       vertices: []
       indices: 
       edges: []
@@ -397,10 +405,10 @@ TextureImporter:
       name: coinAnimation_13
       rect:
         serializedVersion: 2
-        x: 8
-        y: 16
-        width: 8
-        height: 8
+        x: 16
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -408,7 +416,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41b6b630fc88d6249bdaf1828a939bde
+      spriteID: 327e6166ba91b2c48877c2f135972dfc
       vertices: []
       indices: 
       edges: []
@@ -417,10 +425,10 @@ TextureImporter:
       name: coinAnimation_14
       rect:
         serializedVersion: 2
-        x: 16
-        y: 16
-        width: 8
-        height: 8
+        x: 32
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -428,7 +436,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6dc6ad3eafb66d94984d4614003df7ee
+      spriteID: 26eb397a9569b0045a572a434f263ae8
       vertices: []
       indices: 
       edges: []
@@ -437,10 +445,10 @@ TextureImporter:
       name: coinAnimation_15
       rect:
         serializedVersion: 2
-        x: 24
-        y: 16
-        width: 8
-        height: 8
+        x: 48
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -448,7 +456,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 980f279c60d1cdf47be5b81a3cc786a2
+      spriteID: a5e7cd526d2ee0e4a9c8a99017533db6
       vertices: []
       indices: 
       edges: []
@@ -457,10 +465,10 @@ TextureImporter:
       name: coinAnimation_16
       rect:
         serializedVersion: 2
-        x: 32
-        y: 16
-        width: 8
-        height: 8
+        x: 64
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -468,7 +476,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa3e340731887d34aa82b6686a98b069
+      spriteID: 248563f2349acd74cb5a7c776c1f8ad7
       vertices: []
       indices: 
       edges: []
@@ -477,10 +485,10 @@ TextureImporter:
       name: coinAnimation_17
       rect:
         serializedVersion: 2
-        x: 40
-        y: 16
-        width: 8
-        height: 8
+        x: 80
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -488,7 +496,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d190bb245fdfbed4abcb57faa091568d
+      spriteID: 05dab974538e1594fb76b6ad2a18b1d7
       vertices: []
       indices: 
       edges: []
@@ -498,9 +506,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 8
-        width: 8
-        height: 8
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -508,7 +516,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c8c88d43b839864fa43a9a0dff7f0ce
+      spriteID: a64fc1ff3690d8946a9d6dba8cc4034c
       vertices: []
       indices: 
       edges: []
@@ -517,10 +525,10 @@ TextureImporter:
       name: coinAnimation_19
       rect:
         serializedVersion: 2
-        x: 8
-        y: 8
-        width: 8
-        height: 8
+        x: 16
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -528,7 +536,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec59c185da928914a942f33d81d6ecbb
+      spriteID: f0d6652f3aaffc647b73b8dcc67aed4e
       vertices: []
       indices: 
       edges: []
@@ -537,10 +545,10 @@ TextureImporter:
       name: coinAnimation_20
       rect:
         serializedVersion: 2
-        x: 16
-        y: 8
-        width: 8
-        height: 8
+        x: 32
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -548,7 +556,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 728d843bbba3f174d96377dc2cddb969
+      spriteID: d508b978c27abdc498c7b8df5bd33b19
       vertices: []
       indices: 
       edges: []
@@ -557,10 +565,10 @@ TextureImporter:
       name: coinAnimation_21
       rect:
         serializedVersion: 2
-        x: 24
-        y: 8
-        width: 8
-        height: 8
+        x: 48
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -568,7 +576,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f896de9d9153da4390803194d6bcf38
+      spriteID: 2a3f5352c27d71d4781f1f7e6bd60fed
       vertices: []
       indices: 
       edges: []
@@ -577,10 +585,10 @@ TextureImporter:
       name: coinAnimation_22
       rect:
         serializedVersion: 2
-        x: 32
-        y: 8
-        width: 8
-        height: 8
+        x: 64
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -588,7 +596,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 532ef707a2f1ffc41b1edd1af4f7f6e2
+      spriteID: c04c5918250a73645a5a8413d409c918
       vertices: []
       indices: 
       edges: []
@@ -597,10 +605,10 @@ TextureImporter:
       name: coinAnimation_23
       rect:
         serializedVersion: 2
-        x: 40
-        y: 8
-        width: 8
-        height: 8
+        x: 80
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -608,7 +616,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81de95903307003478c836b43ff54478
+      spriteID: abd00666facce9744a0f6c40eacbef64
       vertices: []
       indices: 
       edges: []
@@ -618,9 +626,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 8
-        height: 8
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -628,7 +636,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a5cc25c86ac15e418681ff572b528d8
+      spriteID: 6bb0a372e8b018247a1b76d08213aacb
       vertices: []
       indices: 
       edges: []
@@ -637,10 +645,10 @@ TextureImporter:
       name: coinAnimation_25
       rect:
         serializedVersion: 2
-        x: 8
-        y: 0
-        width: 8
-        height: 8
+        x: 16
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -648,7 +656,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a8716f60e33c814391577fce8fe739b
+      spriteID: 1288acfe8890de446998d717065fb1e5
       vertices: []
       indices: 
       edges: []
@@ -657,10 +665,10 @@ TextureImporter:
       name: coinAnimation_26
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
-        width: 8
-        height: 8
+        x: 32
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -668,7 +676,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 820bcaab6ad42d748be4d88c0b7b3e0a
+      spriteID: b74a9abd586411d4bab689159649737b
       vertices: []
       indices: 
       edges: []
@@ -677,10 +685,10 @@ TextureImporter:
       name: coinAnimation_27
       rect:
         serializedVersion: 2
-        x: 24
-        y: 0
-        width: 8
-        height: 8
+        x: 48
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -688,7 +696,167 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a0463e432da95440bd77ed7bc4db42e
+      spriteID: 7e35171074de0554c93f076eae12cade
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coinAnimation_28
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad0ea19a97a5d5749b4583d0ae000a86
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coinAnimation_29
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3df7ca28eebde48418362df9b68b33c0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coinAnimation_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fdebc775816c6540b3ce44c712d1d84
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coinAnimation_31
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544b830089110d64ab83b939fc3599a4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coinAnimation_32
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3bd05444f2d6d64d87486bf6d1a0639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coinAnimation_33
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 940230ef5944ecd4f9f4dbb3f3a589a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coinAnimation_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e278811f063041e4f8c7be15fdd84b26
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coinAnimation_35
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ed81d06ed46f994eba266588551d7d1
       vertices: []
       indices: 
       edges: []

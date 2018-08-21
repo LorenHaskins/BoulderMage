@@ -1,10 +1,5 @@
 ﻿public class SilverCoinScript : LootDrops
 {
     protected override string LootType { get { return "silver"; } } //Change Loot Animation Type Here
-
-    void Start()
-    {
-        value = 5;
-        ObjectComponents();
-    }
+    protected override int Value { get { return silverValue; } } //Change Loot Animation Type Here
 }

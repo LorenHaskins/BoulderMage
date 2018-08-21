@@ -130,6 +130,8 @@ MonoBehaviour:
     type: 2}
   goldCoinPrefab: {fileID: 1721909931675212, guid: a224a911050a5784fba962f969e578f2,
     type: 2}
+  platinumCoinPrefab: {fileID: 1864141637558058, guid: 6f1dbdb0a9e336442bf46a446cdf35f0,
+    type: 2}
 --- !u!212 &212009024517390696
 SpriteRenderer:
   m_ObjectHideFlags: 1

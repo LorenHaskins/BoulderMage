@@ -28,6 +28,7 @@ public class playerStats : MonoBehaviour {
     public float actualPlayerSpeed;
     public RuneScriptSpeed RuneScriptSpeed;
     public int coins;
+    public float coinCount;
 
     // Use this for initialization
     void Awake()
@@ -90,5 +91,7 @@ public class playerStats : MonoBehaviour {
             actualPlayerSpeed = playerSpeedStat + runeMultiplyerSpeed;
             
         }
+
+        coinCount = coins;
     }
 }

@@ -1,10 +1,5 @@
 ﻿public class GoldCoinScript : LootDrops
 {
     protected override string LootType { get { return "gold"; } } //Change Loot Animation Type Here
-
-    void Start()
-    {
-        value = 10;
-        ObjectComponents();
-    }
+    protected override int Value { get { return goldValue; } } //Change Loot Animation Type Here
 }

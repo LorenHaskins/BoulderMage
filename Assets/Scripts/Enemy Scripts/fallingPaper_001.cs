@@ -11,17 +11,21 @@ public class fallingPaper_001 : EnemyClass
         worthXP = 1;
 
         //Chance is Probability, Min Max is how many if it happens
-        bronzeDropChance = 50;
-        bronzeCoinMin = 10;
-        bronzeCoinMax = 10;
+        bronzeDropChance = 100;
+        bronzeCoinMin = 5;
+        bronzeCoinMax = 5;
         //Chance is Probability, Min Max is how many if it happens
-        silverDropChance = 50;
-        silverCoinMax = 10;
-        silverCoinMin = 10;
+        silverDropChance = 100;
+        silverCoinMax = 5;
+        silverCoinMin = 5;
         //Chance is Probability, Min Max is how many if it happens
-        goldDropChance = 50;
-        goldCoinMax = 10;
-        goldCoinMin = 10;
+        goldDropChance = 100;
+        goldCoinMax = 5;
+        goldCoinMin = 5;
+        //Chance is Probability, Min Max is how many if it happens
+        platinumDropChance = 100;
+        platinumCoinMax = 50;
+        platinumCoinMin = 50;
 
         ObjectComponents();
     }
@@ -73,5 +77,6 @@ public class fallingPaper_001 : EnemyClass
         dropBronzeCoins();
         dropSilverCoins();
         dropGoldCoins();
+        dropPlatinumCoins();
     }
 }
