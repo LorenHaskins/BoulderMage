@@ -17,6 +17,6 @@ public class nextScene : MonoBehaviour {
 
     private void OnMouseUp()
     {
-        SceneManager.LoadScene("Basic Controls Finished");
+        SceneManager.LoadScene("ControlsStage");
     }
 }

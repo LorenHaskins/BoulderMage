@@ -24,8 +24,8 @@ public class fallingPaper_001 : EnemyClass
         goldCoinMin = 5;
         //Chance is Probability, Min Max is how many if it happens
         platinumDropChance = 100;
-        platinumCoinMax = 50;
-        platinumCoinMin = 50;
+        platinumCoinMax = 5;
+        platinumCoinMin = 5;
 
         ObjectComponents();
     }
