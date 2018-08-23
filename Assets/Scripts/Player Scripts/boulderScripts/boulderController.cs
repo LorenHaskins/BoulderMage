@@ -114,4 +114,12 @@ public class boulderController : MonoBehaviour {
     {
             rb2d.velocity = (transform.right * maxVelocity);
     }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "enemy")
+        {
+            pS.lives += -1;
+        }
+    }
 }

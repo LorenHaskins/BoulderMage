@@ -29,6 +29,7 @@ public class playerStats : MonoBehaviour {
     public RuneScriptSpeed RuneScriptSpeed;
     public int coins;
     public float coinCount;
+    public int lives;
 
     // Use this for initialization
     void Awake()
@@ -52,6 +53,7 @@ public class playerStats : MonoBehaviour {
         playerSpeedStat = 1f;
         RuneScriptSpeed = RuneScriptSpeed.rune;
         coins = 5;
+        lives = 3;
 
 
         //Speed Rune Stats
