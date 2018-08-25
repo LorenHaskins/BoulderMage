@@ -19,10 +19,10 @@ public class playerStats : MonoBehaviour {
     public int runeCoolDownWind;
     public int runeCoolDownTime;
     public int runeCoolDownInv;
-    public int runeDuractionSpeed;
+    public int runeDurationSpeed;
     public int runeDurationRain;
     public int runeDurationWind;
-    public int runeDurationTIme;
+    public int runeDurationTime;
     public int runeDurationInv;
     public float runeMultiplyerSpeed;
     public float actualPlayerSpeed;
@@ -58,28 +58,28 @@ public class playerStats : MonoBehaviour {
 
         //Speed Rune Stats
         runeCoolDownSpeed = 10;
-        runeDuractionSpeed = 5;
+        runeDurationSpeed = 2;
         runeUnlockSpeed = true;
         runeMultiplyerSpeed = 5;
 
-        //Wind Rune Stats
-        runeCoolDownWind = 10;
-        runeDurationWind = 5;
-        runeUnlockWind = true;
-
         //Rain Rune Stats
         runeCoolDownRain = 10;
-        runeDurationRain = 5;
+        runeDurationRain = 2;
         runeUnlockRain = true;
+
+        //Wind Rune Stats
+        runeCoolDownWind = 10;
+        runeDurationWind = 2;
+        runeUnlockWind = true;
 
         //Time Rune Stats
         runeCoolDownTime = 10;
-        runeDurationTIme = 5;
+        runeDurationTime = 2;
         runeUnlockTime = true;
 
         //Inv Rune Stats
         runeCoolDownInv = 10;
-        runeDurationInv = 5;
+        runeDurationInv =10;
         runeUnlockInv = true;
     }
 	

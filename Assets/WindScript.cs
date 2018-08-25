@@ -16,7 +16,7 @@ public class WindScript : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-        rb2d.velocity = (transform.up * 25);
-        Destroy(gameObject, pS.runeDurationWind);
+        rb2d.velocity = (transform.up * 20);
+        Destroy(gameObject, pS.runeDurationWind + 3);
     }
 }

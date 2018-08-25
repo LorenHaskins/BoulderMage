@@ -10,7 +10,7 @@ public class boulderController : MonoBehaviour {
     public static boulderController boulder;
 
     private Rigidbody2D rb2d;
-    private CircleCollider2D boulderCollider;
+    public CircleCollider2D boulderCollider;
     private float staffLocation;
     private float boulderLocation;
     public float boulderDistance;

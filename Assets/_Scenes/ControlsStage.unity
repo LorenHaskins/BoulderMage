@@ -152,9 +152,25 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114569740606525412, guid: 6519cf918adee3848a559312e81789fd,
+        type: 2}
+      propertyPath: InvBarrierSpawn
+      value: 
+      objectReference: {fileID: 232815437}
+    - target: {fileID: 114569740606525412, guid: 6519cf918adee3848a559312e81789fd,
+        type: 2}
+      propertyPath: InvBarrierPrefab
+      value: 
+      objectReference: {fileID: 1600079578137278, guid: e3467988b741d1540960f53ac80c2767,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6519cf918adee3848a559312e81789fd, type: 2}
   m_IsPrefabAsset: 0
+--- !u!4 &232815437 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4492078496847544, guid: d58bc953bab17af45a2230da007a29a3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1530505454}
 --- !u!1001 &253459432
 Prefab:
   m_ObjectHideFlags: 0

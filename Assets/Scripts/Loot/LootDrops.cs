@@ -92,7 +92,7 @@ public abstract class LootDrops : MonoBehaviour
     protected void DelayAutoCollect()
     {
         Invoke("autoCollectVert", 5);
-        
+        Invoke("zeroGrav", 7);
     }
 
     protected void autoCollectVert()
@@ -102,5 +102,11 @@ public abstract class LootDrops : MonoBehaviour
         autoCollectHoriz = true;
         soundCollectBounce.Play();
         Debug.Log("ROCKET COINS!");
+    }
+
+    protected void zeroGrav()
+    {
+        rb2d.gravityScale = 0;
+        Destroy(gameObject, 5);
     }
 }
