@@ -18,43 +18,29 @@ public class EnemyClass : MonoBehaviour
     protected float worthXP;
     public float givePlayerExp;
     public playerStats pS;
-    bool animState(string state) { return anim.GetCurrentAnimatorStateInfo(0).IsName(state); }
+    bool AnimState(string state) { return anim.GetCurrentAnimatorStateInfo(0).IsName(state); }
     protected Quaternion dropRotation;
     public static RuneScriptTime timeRune;
     public GameObject timeActivatePrefab;
-    protected GameObject lootDropPrefab;
     protected bool freezeTimeActive;
     protected float wetGrav;
     protected bool wet;
 
-    protected int dropPercentage = 0;
-    protected int lootDropChance = 0;
-    protected int lootDropMin = 0;
-    protected int lootDropMax = 0;
+    public struct Loot {
+        public Loot(string prefabName, int dropChance, int dropMax, int dropMin) {
+            this.prefabName = prefabName;
+            this.dropChance = dropChance;
+            this.dropMax = dropMax;
+            this.dropMin = dropMin;
+        }
 
-    public GameObject bronzeCoinPrefab;
-    protected int bronzeDropChance; //Chance of ANY coins dropping
-    protected int bronzeCoinDropRate; //How many coins drop. based on Max and Min
-    protected int bronzeCoinMax;
-    protected int bronzeCoinMin;
+        public string prefabName;
+        public int dropChance;
+        public int dropMax;
+        public int dropMin;
+    }
 
-    public GameObject silverCoinPrefab;
-    protected int silverDropChance; //Chance of ANY coins dropping
-    protected int silverCoinDropRate; //How many coins drop. based on Max and Min
-    protected int silverCoinMax;
-    protected int silverCoinMin;
-
-    public GameObject goldCoinPrefab;
-    protected int goldDropChance; //Chance of ANY coins dropping
-    protected int goldCoinDropRate; //How many coins drop. based on Max and Min
-    protected int goldCoinMax;
-    protected int goldCoinMin;
-
-    public GameObject platinumCoinPrefab;
-    protected int platinumDropChance; //Chance of ANY coins dropping
-    protected int platinumCoinDropRate; //How many coins drop. based on Max and Min
-    protected int platinumCoinMax;
-    protected int platinumCoinMin;
+    protected List<Loot> loots;
     
     float roundToTenths(float x) { return (Mathf.Round(x * 10) / 10); }
        
@@ -68,7 +54,6 @@ public class EnemyClass : MonoBehaviour
         selfCollider = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
         pS = playerStats.stats;
-
         hDirection = 0;
         dropRotation = new Quaternion(transform.rotation.x, transform.rotation.y, 0, transform.rotation.w);
         wetGrav = 2;
@@ -77,7 +62,7 @@ public class EnemyClass : MonoBehaviour
 
     protected void updateVariables() //Variables that need to update every single frame
     {
-        whenDestroyed = animState("destroy");
+        whenDestroyed = AnimState("destroy");
         boulderLocation = roundToTenths(boulderCollider.bounds.center.x);
         selfLocation = roundToTenths(selfCollider.bounds.center.x);
 
@@ -91,63 +76,22 @@ public class EnemyClass : MonoBehaviour
         }
     }
 
-    protected void dropLoot()
-    {
-        dropBronzeCoins();
-        dropSilverCoins();
-        dropGoldCoins();
-        dropPlatinumCoins();
-    }
-
-    protected void dropSuccess()
-    {
-        if (dropPercentage <= lootDropChance)
-        {
-            var lootDropRate = Random.Range(lootDropMin, lootDropMax);
-            Debug.Log("Drop " + lootDropRate + " Bronze Coins");
-            for (var i = 0; i < lootDropRate; i++)
-                Instantiate(lootDropPrefab, transform.position, dropRotation);
+    protected void dropLoot() {
+        foreach(Loot loot in this.loots) {
+            dropSuccess(loot);
         }
     }
 
-    protected void dropBronzeCoins()
+    protected void dropSuccess(Loot loot) 
     {
-        dropPercentage = Random.Range(1, 101);
-        lootDropChance = bronzeDropChance;
-        lootDropMin = bronzeCoinMin;
-        lootDropMax = bronzeCoinMax;
-        lootDropPrefab = bronzeCoinPrefab;
-        dropSuccess();
-    }
-
-    protected void dropSilverCoins()
-    {
-        dropPercentage = Random.Range(1, 101);
-        lootDropChance = silverDropChance;
-        lootDropMin = silverCoinMin;
-        lootDropMax = silverCoinMax;
-        lootDropPrefab = silverCoinPrefab;
-        dropSuccess();
-    }
-
-    protected void dropGoldCoins()
-    {
-        dropPercentage = Random.Range(1, 101);
-        lootDropChance = goldDropChance;
-        lootDropMin = goldCoinMin;
-        lootDropMax = goldCoinMax;
-        lootDropPrefab = goldCoinPrefab;
-        dropSuccess();
-    }
-
-    protected void dropPlatinumCoins()
-    {
-        dropPercentage = Random.Range(1, 101);
-        lootDropChance = platinumDropChance;
-        lootDropMin = platinumCoinMin;
-        lootDropMax = platinumCoinMax;
-        lootDropPrefab = platinumCoinPrefab;
-        dropSuccess();
+        int dropPercentage = Random.Range(1, 101);
+        if (dropPercentage <= loot.dropChance)
+        {
+            var lootDropRate = Random.Range(loot.dropMin, loot.dropMax + 1);  //How many coins drop. based on Max and Min
+            Debug.Log("Drop " + lootDropRate + " Bronze Coins");
+            for (var i = 0; i < lootDropRate; i++)
+                Instantiate(Resources.Load(loot.prefabName), transform.position, dropRotation);
+        }
     }
 
     protected void freezeTime()
