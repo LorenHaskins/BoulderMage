@@ -12,6 +12,9 @@ public class openingMoveStaff : MonoBehaviour
     protected BoxCollider2D col;
     public float vDirection;
     public BoxCollider2D ignoreCol;
+    public bool inMotion;
+    public GameObject stationaryObjects;
+    public GameObject movingObjects;
 
     // Use this for initialization
     void Start()
@@ -19,8 +22,9 @@ public class openingMoveStaff : MonoBehaviour
 
         rb2d = GetComponent<Rigidbody2D>();
         col = GetComponent<BoxCollider2D>();
-        vDirection = 2.35f;
+        vDirection = 2.05f;
         Physics2D.IgnoreLayerCollision(14,14);
+        inMotion = true;
     }
 
     // Update is called once per frame
@@ -33,7 +37,8 @@ public class openingMoveStaff : MonoBehaviour
     {
         if (col.gameObject.tag == "barrier")
         {
-            vDirection = 0;
+            Instantiate(stationaryObjects, transform.parent.position, transform.parent.rotation);
+            Destroy(transform.parent.gameObject, 0);
         }
     }
 }

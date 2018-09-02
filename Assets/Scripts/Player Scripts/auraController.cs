@@ -5,7 +5,7 @@ using UnityEngine;
 public class auraController : MonoBehaviour {
     private Animator anim;
     private Animator staffAnim;
-    private staffController staff;
+    private StaffController staff;
     private Rigidbody2D rb2d;
     private float hSpeed;
     private float hDirection;
@@ -18,7 +18,7 @@ public class auraController : MonoBehaviour {
     void Start () {
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        staff = staffController.staff;
+        staff = StaffController.staff;
         sound = GetComponent<AudioSource>();
         sound.enabled = false;
         hSpeed = 2;

@@ -20,7 +20,7 @@ public class openingMoveBoulder : MonoBehaviour
 
         rb2d = GetComponent<Rigidbody2D>();
         col = GetComponent<BoxCollider2D>();
-        hDirection = 2f;
+        hDirection = 1.8f;
         Physics2D.IgnoreLayerCollision(14, 14);
         anim = GetComponent<Animator>();
         anim.enabled = false;

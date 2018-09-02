@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class staffController : MonoBehaviour {
+public class StaffController : MonoBehaviour {
 
-    public static staffController staff;
+    public static StaffController staff;
     public bool animLightning;
     public bool animIdle;
     public bool animMotion;
@@ -28,8 +28,8 @@ public class staffController : MonoBehaviour {
     public float staffFacing;
     public playerStats pS;
     public float statMultiplyer;
-    bool animState(string state) { return anim.GetCurrentAnimatorStateInfo(0).IsName(state); }
-    bool mouseClick() { return Input.GetMouseButtonDown(0); }
+    bool AnimState(string state) { return anim.GetCurrentAnimatorStateInfo(0).IsName(state); }
+    bool MouseClick() { return Input.GetMouseButtonDown(0); }
     public RuneScriptSpeed RuneScriptSpeed;
     public float runeMultiplyer;
     public float velocity;
@@ -66,38 +66,38 @@ public class staffController : MonoBehaviour {
         sound = GetComponent<AudioSource>();
     }
 
-    float roundToTenths(float x)
+    float RoundToTenths(float x)
     {
         return (Mathf.Round(x * 10) / 10);
     }
 
     // Update is called once per frame
     void Update() {
-        updateVariables();
-        updateAnimation();
-        updateMotion();
+        UpdateVariables();
+        UpdateAnimation();
+        UpdateMotion();
     }
     
-    void updateVariables()
+    void UpdateVariables()
     {
         statMultiplyer = pS.actualPlayerSpeed;
         maxVelocity = (hDirection * statMultiplyer);
     }
 
-    void updateMotion()
+    void UpdateMotion()
     {
-            applyMovementSpeed();
+            ApplyMovementSpeed();
 
             //Motion Controller
             Vector3 mouseLocation = (Camera.main.ScreenToWorldPoint(Input.mousePosition)); //outputs mouse coordinates in real time
-            strikePoint = roundToTenths(staffLightningPoint.bounds.center.x); //x location for staff to move
-            strikeBounds = roundToTenths(staffLightningPoint.bounds.center.y); //mouse bounds for moving staff
+            strikePoint = RoundToTenths(staffLightningPoint.bounds.center.x); //x location for staff to move
+            strikeBounds = RoundToTenths(staffLightningPoint.bounds.center.y); //mouse bounds for moving staff
 
-            if (!animState("staffLightning"))
+            if (!AnimState("staffLightning"))
             {
-                if (mouseClick())
+                if (MouseClick())
                 {
-                    moveLocation = roundToTenths(mouseLocation.x); //creates x location for staff
+                    moveLocation = RoundToTenths(mouseLocation.x); //creates x location for staff
                     if (mouseLocation.y > strikeBounds) //staff will move
                     {
                         strikeState = true;
@@ -122,16 +122,16 @@ public class staffController : MonoBehaviour {
             else if ((strikeState == true))
             {
                 hDirection = 0;
-                strikeLightning();
+                StrikeLightning();
                 strikeState = false; //Causes the boulder to stop jittering, and ceases the strike state
             } 
 
 
     }
 
-    void updateAnimation()
+    void UpdateAnimation()
     {
-        staffMovement = staffController.hDirection;
+        staffMovement = StaffController.hDirection;
         
         if (strikeState == false)
         {
@@ -150,7 +150,7 @@ public class staffController : MonoBehaviour {
         }
 
         //Flip Sprite
-        if (!animState("staffShoot"))
+        if (!AnimState("staffShoot"))
             if (strikePoint < moveLocation)
             {
                 transform.localScale = new Vector2(1, 1);
@@ -165,9 +165,9 @@ public class staffController : MonoBehaviour {
             //Aura Shoot
                 if (auraState == true)
                 {
-                    if (!animState("staffShoot"))
+                    if (!AnimState("staffShoot"))
                     {
-                        shootAura(); //Look below for script to shoot aura
+                        ShootAura(); //Look below for script to shoot aura
                     }
                     anim.SetBool("shoot", true);
                     animShoot = true;
@@ -180,9 +180,9 @@ public class staffController : MonoBehaviour {
                 }
     }
 
-    void shootAura()
+    void ShootAura()
     {
-        if (!animState("staffShoot"))
+        if (!AnimState("staffShoot"))
         {
             Debug.Log("SHOOT AURA");
             // Create Aura
@@ -191,12 +191,12 @@ public class staffController : MonoBehaviour {
         }
     }
 
-    void strikeLightning()
+    void StrikeLightning()
     {
         anim.SetBool("lightning", true);
         sound.Play();
         animLightning = true;
-        if (!animState("staffShoot"))
+        if (!AnimState("staffShoot"))
         {
             Debug.Log("SHOOT Lightning");
             //Create Lightning
@@ -205,7 +205,7 @@ public class staffController : MonoBehaviour {
          
     }
 
-    void applyMovementSpeed()
+    void ApplyMovementSpeed()
     {
         //This causes the staff to "warp" to location if it's within the maxVelocity distance. Removes all jitter from staff movement.
         if (Mathf.Abs(moveLocation - strikePoint) < (maxVelocity/24))
@@ -217,6 +217,15 @@ public class staffController : MonoBehaviour {
         else
         {
             rb2d.velocity = (transform.right * maxVelocity);
+        }
+    }
+
+    void IsFaceGone()
+    {
+        if (GameObject.FindWithTag("face") != null)
+        {
+            Invoke("DecreaseAlphaAndDestroy", 2);
+            anim.SetBool("dying", true);
         }
     }
 }

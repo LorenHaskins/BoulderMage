@@ -7,6 +7,8 @@ public class RuneScriptRain : RuneScript
     protected override int DurationTimer { get { return pS.runeDurationRain; } }
     protected override int CoolDownTimer { get { return pS.runeCoolDownRain; } }
     public static RuneScriptRain rune;
+    public GameObject rainPrefab;
+    public Transform rainSpawn;
 
     // Use this for initialization
     void Awake()
@@ -25,5 +27,6 @@ public class RuneScriptRain : RuneScript
     protected override void RuneAction()
     {
         Debug.Log("Rain Rune AWAYYYY!!!");
+        Instantiate(rainPrefab, rainSpawn.position, rainSpawn.rotation);
     }
 }

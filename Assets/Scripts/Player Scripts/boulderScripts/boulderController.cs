@@ -15,11 +15,13 @@ public class boulderController : MonoBehaviour {
     private float boulderLocation;
     public float boulderDistance;
     public float hDirection;
-    private staffController staff;
+    private StaffController staff;
     public Animator anim;
     public playerStats pS;
     public float statMultiplyer;
     public float maxVelocity;
+    public GameObject deathSequencePrefab;
+    public Transform deathSpawn;
 
     // Use this for initialization
     void Awake()
@@ -42,7 +44,7 @@ public class boulderController : MonoBehaviour {
         anim = GetComponent<Animator>();
         boulderDistance = 1;
         hDirection = 0;
-        staff = staffController.staff;
+        staff = StaffController.staff;
         pS = playerStats.stats;
 
     }
@@ -102,6 +104,11 @@ public class boulderController : MonoBehaviour {
                 transform.localScale = new Vector2(-1, 1);
             }
         }
+
+        if (GameObject.FindWithTag("deathSequence") != null)
+        {
+            Invoke("DeathSequence", 0);
+        }
     }
 
     void updateVariables()
@@ -119,7 +126,12 @@ public class boulderController : MonoBehaviour {
     {
         if (col.gameObject.tag == "enemy")
         {
-            pS.lives += -1;
+            Instantiate(deathSequencePrefab, deathSpawn.position, deathSpawn.rotation);
         }
+    }
+
+    void DeathSequence()
+    {
+        anim.enabled = false;
     }
 }

@@ -7,6 +7,7 @@ public class RuneScriptTime : RuneScript
     protected override int DurationTimer { get { return pS.runeDurationTime; } }
     protected override int CoolDownTimer { get { return pS.runeCoolDownTime; } }
     public static RuneScriptTime rune;
+    public int duration;
 
     // Use this for initialization
     void Awake()
@@ -25,5 +26,6 @@ public class RuneScriptTime : RuneScript
     protected override void RuneAction()
     {
         Debug.Log("Time Rune AWAYYYY!!!");
+        duration = DurationTimer;
     }
 }

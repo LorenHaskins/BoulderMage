@@ -19,7 +19,7 @@ public class openingMoveMage : MonoBehaviour
 
         rb2d = GetComponent<Rigidbody2D>();
         col = GetComponent<BoxCollider2D>();
-        hDirection = -1.6f;
+        hDirection = -1.4f;
     }
 
     // Update is called once per frame

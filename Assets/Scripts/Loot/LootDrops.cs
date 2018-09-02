@@ -74,13 +74,9 @@ public abstract class LootDrops : MonoBehaviour
 
     protected void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "boulder")
+        if (col.gameObject.tag == "boulder" || col.gameObject.tag == "invbarrier")
         {
-            Debug.Log("Aww Yiss Mother Fuckin' Coin");
-            anim.SetTrigger("catch");
-            soundGet.Play();
-            pS.coins += Value;
-            Destroy(gameObject, destructOnCatch);
+            CollectLoot();
         }
 
         if (col.gameObject.tag == "ground")
@@ -89,13 +85,26 @@ public abstract class LootDrops : MonoBehaviour
         }
     }
 
-    protected void DelayAutoCollect()
+    protected void CollectLoot()
     {
-        Invoke("autoCollectVert", 5);
-        Invoke("zeroGrav", 7);
+        anim.SetTrigger("catch");
+        soundGet.Play();
+        Invoke("AddValueAndDestroy", destructOnCatch);        
     }
 
-    protected void autoCollectVert()
+    protected void AddValueAndDestroy()
+    {
+        pS.coins += Value;
+        Destroy(gameObject, 0);
+    }
+
+    protected void DelayAutoCollect()
+    {
+        Invoke("AutoCollectVert", 5);
+        Invoke("ZeroGrav", 7);
+    }
+
+    protected void AutoCollectVert()
     {
         var vertStrength = Random.Range(800, 1200);
         rb2d.AddForce(transform.up * vertStrength);
@@ -104,9 +113,9 @@ public abstract class LootDrops : MonoBehaviour
         Debug.Log("ROCKET COINS!");
     }
 
-    protected void zeroGrav()
+    protected void ZeroGrav()
     {
-        rb2d.gravityScale = 0;
+        rb2d.gravityScale = 0.01f;
         Destroy(gameObject, 5);
     }
 }
